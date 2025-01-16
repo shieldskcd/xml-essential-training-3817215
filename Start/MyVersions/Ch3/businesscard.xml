@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type ="text/css" href="businesscard.css" ?>
+
+<BusinessCard>
+    <Name>Dave Shields</Name>
+    <phone type = "mobile" primary ="primary">(913) 318-8156</phone>
+    <phone type = "work">(913) 318-8156</phone>
+    <phone type = "fax">(913)-229-6944</phone>
+    <email>dshields@moonshot-solutions.com</email>
+</BusinessCard>

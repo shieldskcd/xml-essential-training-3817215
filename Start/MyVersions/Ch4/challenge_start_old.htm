@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Programming Challenge: DOM</title>
+        <script type="text/javascript">
+            async function loadXMLDoc(docURL) {
+                let doc = await fetch(docURL);
+                let response = await doc.text();
+                let xml = new DOMParser().parseFromString(response, "text/xml");
+                return xml;
+            }
+
+            function createNameSection(currentCard) {
+                var nameSection = document.createElement("div");
+                nameSection.setAttribute("class", "Name");
+                var nameStr = document.createTextNode(
+                    currentCard.getElementsByTagName("Name")[0].firstChild.data
+                );
+                nameSection.appendChild(nameStr);
+                return nameSection;
+            }    
+
+
+
+            window.addEventListener("load", function () {
+                document
+                    .getElementById("createCard")
+                    .addEventListener("click", createCardElements);
+            });
+        </script>
+        <link rel="stylesheet" href="businesscard.css" />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <button id="createCard">Create Business Card Elements</button>
+        <div id="cardContainer"></div>
+    </body>
+</html>
